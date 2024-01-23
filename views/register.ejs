@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RecipeBook</title>
+    <link rel="stylesheet" href="../css/register.css">
+</head>
+<body>
+    <header>
+        <h1>Recipe Book</h1>
+    </header>
+
+
+    <div style="display: flex; justify-content: center; margin-top: 15%; align-items:center;">
+        <div class="card">
+            <h1>Click Here to register!!!</h1>
+            <button onclick="toggleOverlay()">Register</button>
+
+            <button onclick="window.location.href='/'">HOME</button>
+        </div>    
+    </div>
+   
+
+    <!-- Overlay with Registration Form -->
+    <div class="overlay" id="overlay">
+        <div class="registration-form">
+            <form action="" method="post">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" required>
+
+                <label for="age">Age:</label>
+                <input type="number" id="age" name="age" required>
+            </form>
+            <div style="justify-content: center;">
+            <button type="submit">Register</button>
+            <button onclick="toggleOverlay()">Close</button>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Recipe Book</p>
+    </footer>
+
+
+    <script>
+        // JavaScript function to toggle the visibility of the overlay
+        function toggleOverlay() {
+            var overlay = document.getElementById('overlay');
+            overlay.style.display = (overlay.style.display === 'flex') ? 'none' : 'flex';
+        }
+    </script>
+</body>
+</html>

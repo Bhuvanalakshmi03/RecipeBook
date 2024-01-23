@@ -1,8 +1,109 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width" initial-scale="1.0">
         <title>RecipeBook</title>
+        <link rel="stylesheet" href="../css/style.css">
     </head>
+    <body>
+        <header>
+            <h1>Recipe Book</h1>
+        </header>
+    
+        <section class="hero">
+            <div class="intro">
+            <h2 style="color:#fff;">Welcome to the Recipe Book!</h2>
+            <p style="color:#fff;">Discover, share, and manage your favorite recipes.</p>
+            <p style="color:#fff;">Get started by </p>
+            <div class="button-container">
+                <button onclick="toggleOverlayLogin()">Log In</button>
+                <button onclick="toggleOverlayRegister()">Register</button>
+            </div>
+            </div>
+        </section>
+    
+        <div class="cards">
+            <div class="card">
+                <h3>Explore Diverse Recipes</h3>
+                <p>Discover a wide range of recipes from different cuisines and cooking styles.</p>
+                <div class="button-container">
+                    <a href="#">Explore</a>
+                </div>
+            </div>
+    
+            <div class="card">
+                <h3>Join a Foodie Community</h3>
+                <p>Connect with fellow food enthusiasts, share your creations, and get inspired by others.</p>
+                <div class="button-container">
+                    <a href="#">Join Now</a>
+                </div>
+            </div>
+    
+            <div class="card">
+                <h3>Personal Recipe Collection</h3>
+                <p>Create and manage your own recipes, organize them, and access them anytime, anywhere.</p>
+                <div class="button-container">
+                    <a href="#">Start Cooking</a>
+                </div>
+            </div>
+        </div>
+
+    <!-- Overlay with Login Form -->
+    <div class="overlay" id="overlay-login">
+        <div class="registration-form">
+            <form action="" method="post">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" required>
+                <div style="justify-content: center;">
+                    <button type="submit">Login</button>
+                    <button onclick="toggleOverlayLogin()">Close</button>
+                </div>
+            </form>    
+        </div>
+    </div>
+
+    <!-- Overlay with Registration Form -->
+    <div class="overlay" id="overlay-register">
+        <div class="registration-form">
+            <form action="/" method="post">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" required>
+
+                <label for="age">Age:</label>
+                <input type="number" id="age" name="age" required>
+                <div style="justify-content: center;">
+                    <button type="submit">Register</button>
+                    <button onclick="toggleOverlayRegister()">Close</button>
+                </div>
+            </form>
+            
+        </div>
+    </div>
+    
+        <footer>
+            <p>&copy; 2024 Recipe Book</p>
+        </footer>
+
+        <script>
+            // JavaScript function to toggle the visibility of the overlay
+            function toggleOverlayLogin() {
+                var overlay = document.getElementById('overlay-login');
+                overlay.style.display = (overlay.style.display === 'flex') ? 'none' : 'flex';
+            }
+            function toggleOverlayRegister() {
+                var overlay = document.getElementById('overlay-register');
+                overlay.style.display = (overlay.style.display === 'flex') ? 'none' : 'flex';
+            }
+        </script>
+    </body>
 </html>
