@@ -128,7 +128,7 @@ footer {
     color: #fff !important;
     text-align: center;
     padding: 1%;
-    /* position: fixed; */
+    position: fixed;
     bottom: 0;
     width: 100%;
 }
@@ -168,4 +168,15 @@ input {
     border: 1px solid #ddd;
     border-radius: 4px;
     box-sizing: border-box;
+}
+
+.recipe-form {
+    width:75%;
+    max-width: 600px;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    height:50%;
+    overflow-y: auto;
 }
